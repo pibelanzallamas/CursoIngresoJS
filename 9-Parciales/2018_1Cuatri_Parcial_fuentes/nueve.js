@@ -77,5 +77,5 @@ function mostrar()
     document.write("La cantidad de productos que se conservan bajo cero son de "+ congelados + "<br>");
     document.write("El promedio del peso de todos los productos es de " + promedio + "<br>");
     document.write("El peso maximo es de " + pesoMax + " el peso minimo es de " + pesoMin);
-
+    
 }
