@@ -12,7 +12,7 @@ function mostrar()
         case 10:
         case 11:
             alert("es de manana");
-        break;
+            break;
         case 12:
         case 13:
         case 14:
@@ -22,7 +22,7 @@ function mostrar()
         case 18:
         case 19:
             alert("es de tarde");
-        break;
+            break;
         case 20:
         case 21:
         case 22:
@@ -34,13 +34,12 @@ function mostrar()
         case 4:
         case 5:                                   
             alert("es de noche");
-        break;
+            if(hora < 24){
+                alert("a dormir");
+            }
+            break;
         default:
             alert("hora invalida");
-        break;
-    }
-
-    if(hora < 24 && hora > 19){
-        alert("a dormir");
+            break;
     }
 }

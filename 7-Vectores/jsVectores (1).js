@@ -1,29 +1,60 @@
 function mostrar()
 {
+    let sumaDias;
+    let edad;
+    let edadEnDias;
+    let ndia;
+    let nmes;
+    let diferenciaAnoPasado;
+    let fdia;
+    let fmes;
+    let diferenciaAnoActual;
 
-	var miArray = new Array();
+    sumaDias = 0;
+    edad     = 0;
+    edadEnDias = 0;
+    ndia  = 0;
+    nmes  = 0;
+    diferenciaAnoPasado = 0;
+    fdia  = 0;
+    fmes  = 0;
+    diferenciaAnoActual = 0;
 
-	miArray[0]=5;
-	miArray[1]=74;
-	miArray[2]=8;
-	miArray[3]=94;
-	miArray[4]=5;
-	miArray[5]=0;
-	miArray[6]=80;
-	miArray[7]=789;
-	miArray[8]=5;
-	miArray[9]=7;
+    do{
+        ndia = parseInt(prompt("Ingrese su dia de nacimiento"));
+    }while(isNaN(ndia) || ndia < 1 || ndia > 30)
+    
+    do{
+        nmes = parseInt(prompt("Ingrese su mes de nacimiento"));
+    }while(isNaN(nmes) || nmes < 1 || nmes > 12)
+    
+    do{
+        edad = parseInt(prompt("Ingrese su edad"));
+    }while(isNaN(edad) || edad < 0 || edad > 120)
 
-document.write("El contenido del vector es: <br>");
+    do{
+        bandera = prompt("Los ha cumplido este ano? si/no");
+        bandera = bandera.toLowerCase();
+    }while(!(bandera == "si" || bandera == "no"))
 
-	for(var i=0; i<10; i++)
-	{
+    do{
+        fmes = parseInt(prompt("Que mes este?"));
+    }while(isNaN(fmes) || fmes < 0 || fmes > 12)
 
-		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
-	}
+    do{
+        fdia = parseInt(prompt("Que fecha estamos?"));
+    }while(isNaN(fdia) || fdia < 0 || fdia > 30)
 
+    if(bandera == "si"){
+        diferenciaAnoActual = (30 - ndia) + ((fmes - nmes - 1) * 30) + fdia;
+    }else{
+        diferenciaAnoPasado = (30 - ndia) + ((12 - nmes) * 30);
+        diferenciaAnoActual = fdia + ((fmes - 1) * 30); 
+    }
 
+    edadEnDias = edad * 365.256;
+    edadEnDias = parseInt(edadEnDias);
+    sumaDias = edadEnDias + diferenciaAnoActual + diferenciaAnoPasado;
 
-
-
-}//FIN DE LA FUNCIÓN
+    alert("Felicidades usted lleva " + sumaDias + " días en la tierra! ");
+}
