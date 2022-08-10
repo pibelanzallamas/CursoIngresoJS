@@ -61,6 +61,5 @@ function mostrar()
             break;        
     }
 
-    alert("De acuerdo al continente que elijio, al metodo de pago y la cantidad de dias, su estadia le estaria saliendo: " + total + " pesos");
-    
+    alert("De acuerdo al continente que elijio, al metodo de pago y la cantidad de dias, su estadia le estaria saliendo: " + total + " pesos"); 
 }
