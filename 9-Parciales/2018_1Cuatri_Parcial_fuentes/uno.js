@@ -8,10 +8,14 @@ function mostrar()
     largo = 0;
     perimetro = 0;
 
-    ancho = prompt("Ingrese el ancho");
-    ancho = parseInt(ancho);
-    largo = prompt("Ingrese el largo");
-    largo = parseInt(largo);
+    do{
+        ancho = prompt("Ingrese el ancho");
+        ancho = parseInt(ancho);
+    }while(isNaN(ancho));
+    do{
+        largo = prompt("Ingrese el largo");
+        largo = parseInt(largo);
+    }while(isNaN(largo));
 
     perimetro = (ancho + largo) * 2;
 

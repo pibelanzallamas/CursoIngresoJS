@@ -8,9 +8,9 @@ function mostrar()
     numero2 = 0;
     resultado = 0;
 
-    numero = prompt("Ingrese un numero");
+    numero = prompt("Ingrese un numero.");
     numero = parseInt(numero);
-    numero2 = prompt("Ingrese otro numero");
+    numero2 = prompt("Ingrese otro numero.");
     numero2 = parseInt(numero2);
 
     if(numero == numero2){
@@ -22,11 +22,11 @@ function mostrar()
             if(numero % numero2 !== 0){
                 resultado = numero % numero2;
                 if(resultado > 3){
-                    alert("El resto es mayor a 3");
+                    alert("El resto es mayor a 3.");
                 }
             }
         }
     }
     
-    alert("El resultado es " + resultado );
+    alert("El resultado es " + resultado + "." );
 }   

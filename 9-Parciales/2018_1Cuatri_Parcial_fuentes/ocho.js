@@ -75,11 +75,12 @@ function mostrar()
     }while(respuesta == "si");
 
     promedio = positivos / contador;
+    promedio = promedio.toFixed(2);
 
-    document.write("La cantidad de numero pares son de " + pares + "<br>");
-    document.write("La cantidad de numeros impares son de " + impares + "<br>");
-    document.write("La cantidad de ceros son de " + ceros + "<br>");
-    document.write("El promedio de los numeros positivos es de " + promedio + "<br>");
-    document.write("La suma de los negativos es de " + negativos + "<br>")
-    document.write("El numero maximo es " + numMax + " y la letra es " + letMax + ". El numero minimo es " + numMin + " y la letra es " + letMin);
+    document.write("La cantidad de numero pares son de " + pares + ".<br>");
+    document.write("La cantidad de numeros impares son de " + impares + ".<br>");
+    document.write("La cantidad de ceros son de " + ceros + ".<br>");
+    document.write("El promedio de los numeros positivos es de " + promedio + ".<br>");
+    document.write("La suma de los negativos es de " + negativos + ".<br>")
+    document.write("El numero maximo es " + numMax + " y la letra es " + letMax + ". El numero minimo es " + numMin + " y la letra es " + letMin + ".");
 }

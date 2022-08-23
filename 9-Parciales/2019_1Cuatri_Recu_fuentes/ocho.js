@@ -26,12 +26,12 @@ function mostrar()
 
     do{
         do{
-            color = prompt("Escribar el color del auto rojo/amarillo/verde");
+            color = prompt("Escribar el color del auto rojo/amarillo/verde.");
             color = color.toLowerCase();
-        }while(!(isNaN(color) || color == "rojo" || color == "amarillo" || color == "verde"));
+        }while(color !== "rojo" && color !== "amarillo" && color !== "verde");
 
         do{
-            numero = prompt("Ingrese un numero entre 0 y 10000");
+            numero = prompt("Ingrese un numero entre 0 y 10000.");
             numero = parseInt(numero);
         }while(isNaN(numero) || numero < 0 || numero > 10000);
 
@@ -59,19 +59,15 @@ function mostrar()
             }
         }
 
-        respuesta = prompt("Desea seguir ingresando datos si/no");
+        respuesta = prompt("Desea seguir ingresando datos si/no?");
     }while(respuesta == "si");
 
     promedio = sumaPrecios / contador;
     promerio = promedio.toFixed();
 
-    document.write("Cantidad de autos rojos: " + rojos + "<br>");
-    document.write("Cantidad de autos rojos con precio mayor a 5000: " + rojosCaros + "<br>");
-    document.write("Cantidad de autos con precio menor a 5000: " + baratos + "<br>");
-    document.write("El promedio de todos los precios: " + promedio + "<br>");
-    document.write("El auto mas caro es de: " + masCaro + " y es de color " + colorCaro);
-
-
-
-
+    document.write("Cantidad de autos rojos: " + rojos + ".<br>");
+    document.write("Cantidad de autos rojos con precio mayor a 5000: " + rojosCaros + ".<br>");
+    document.write("Cantidad de autos con precio menor a 5000: " + baratos + ".<br>");
+    document.write("El promedio de todos los precios: " + promedio + ".<br>");
+    document.write("El auto mas caro es de: " + masCaro + " y es de color " + colorCaro) + ".";
 }

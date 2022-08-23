@@ -7,7 +7,6 @@ function mostrar()
     let marca;
     let fabricante;
     let i;
-    let totalBarbijos;
     let precioJabonCaro;
     let cantidadJabonCaro;
     let fabricanteJabonCaro;
@@ -23,8 +22,6 @@ function mostrar()
     let cantidadAlcohol;
     let promedio;
 
-
-    totalBarbijos = 0;
     cantidad = 0;
     precio = 0;
     precioJabonCaro = 0;
@@ -45,6 +42,7 @@ function mostrar()
 
         do{
             tipo = prompt("Ingrese un tipo de producto barbijo/alcohol/jabon");
+            tipo = tipo.toLowerCase();
         }while(tipo !== "jabon" && tipo !== "barbijo" && tipo !== "alcohol");
 
         do{
@@ -57,13 +55,16 @@ function mostrar()
             precio = parseInt(precio);
         }while(isNaN(precio) || precio < 100 || precio > 300);
 
-        marca = prompt("Ingrese una marca");
+        do{
+            marca = prompt("Ingrese una marca");
+            marca = marca.toLowerCase();
+        }while(!(isNaN(marca)));
 
-        fabricante = prompt("Ingrese un fabricante");
+        do{
+            fabricante = prompt("Ingrese un fabricante");
+            fabricante = fabricante.toLowerCase();
+        }while(!(isNaN(fabricante)));
 
-        if(tipo == "barbijo"){
-            totalBarbijos += cantidad;
-        }
 
         if(tipo == "jabon" && bandera == 0){
             precioJabonCaro = precio;
@@ -85,15 +86,14 @@ function mostrar()
         }
         if(tipo == "barbijo"){
             cantidadBarbijo += cantidad;
-            precioBarbijo += barbijo;
+            precioBarbijo += precio;
             contador2++;
-        }
+        }   
         if(tipo == "jabon"){
             cantidadJabon += cantidad;
             precioJabon += precio;
             contador3++;
-        }
-        
+        }  
     }
     
     if(cantidadAlcohol > cantidadBarbijo && cantidadAlcohol > cantidadJabon){
@@ -106,7 +106,13 @@ function mostrar()
         }
     }
     
-    document.write("A) Cantidad y fabricante del jabon mas caro: " + cantidadJabonCaro + ", " + fabricanteJabonCaro + "<br>");
-    document.write("B) El promedio del tipo con mas unidades: " + promedio + "<br>");
-    document.write("C) Unidades de barbijos que se compraron: " + totalBarbijos);
+    if(cantidadJabonCaro > 0){
+        document.write("A) Cantidad y fabricante del jabon mas caro: " + cantidadJabonCaro + ", " + fabricanteJabonCaro + "<br>");
+    }
+    if(promedio > 0){   
+        document.write("B) El promedio del tipo con mas unidades: " + promedio + "<br>");
+    }
+    if(cantidadBarbijo > 0){
+        document.write("C) Unidades de barbijos que se compraron: " + cantidadBarbijo);
+    }
 }

@@ -8,8 +8,8 @@ function mostrar()
     numero1 = 0;
     numero2 = 0;
 
-    numero1 = prompt("Ingrese un numero");
-    numero2 = prompt("Ingrese otro numero");
+    numero1 = prompt("Ingrese un numero.");
+    numero2 = prompt("Ingrese otro numero.");
 
     if(numero1 == numero2){
         resultado = numero1 + numero2;
@@ -19,7 +19,7 @@ function mostrar()
         numero2 = parseInt(numero2);
         resultado = numero1 - numero2;
         if(resultado > 10){
-            alert("La resta es " + resultado + " y supero el 10");
+            alert("La resta es " + resultado + " y supero el 10.");
         }
     }
     if(numero1 < numero2){
@@ -28,5 +28,5 @@ function mostrar()
         resultado = numero1 + numero2;
     }
 
-    alert("El resultado es " + resultado);
+    alert("El resultado es " + resultado + ".");
 }

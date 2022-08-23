@@ -15,12 +15,12 @@ function mostrar()
     continente = document.getElementById("Marca").value;
 
     do{
-        dias = prompt("Ingrese la cantidad de dias");
+        dias = prompt("Ingrese la cantidad de dias.");
         dias = parseInt(dias);
     }while(isNaN(dias));
 
     do{
-        metodoPago = prompt("Ingrese un metodo de pago: efectivo/mercadopago/debito/otro");
+        metodoPago = prompt("Ingrese un metodo de pago: efectivo/mercadopago/debito/otro.");
         metodoPago = metodoPago.toLowerCase();
     }while(!(metodoPago == "efectivo" || metodoPago == "mercadopago" || metodoPago == "debito" || metodoPago == "otro"));
 
@@ -61,5 +61,5 @@ function mostrar()
             break;        
     }
 
-    alert("De acuerdo al continente que elijio, al metodo de pago y la cantidad de dias, su estadia le estaria saliendo: " + total + " pesos"); 
+    alert("De acuerdo al continente que elijio, al metodo de pago y la cantidad de dias, su estadia le estaria saliendo: " + total + " pesos."); 
 }

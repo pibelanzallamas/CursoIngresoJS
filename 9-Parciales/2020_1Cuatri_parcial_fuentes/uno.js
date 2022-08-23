@@ -37,6 +37,5 @@ function mostrar()
 
 	document.write("A) Cantidad y fabricante del alcohol mas economico: " + alcEcoCanti + ", " + alcEcoFabri + "<br>");
 	document.write("B) Promedio del tipo con mas unidades: " + promedio + "<br>");
-	document.write("C) Unidades de jabon en total: " + contador2);
-	
-
+	document.write("C) Unidades de jabon en total: " + contador2);	
+}

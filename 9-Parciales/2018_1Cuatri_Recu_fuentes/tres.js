@@ -8,10 +8,15 @@ function mostrar()
     descuento = 0;
     precioFinal = 0;
 
-    precio = prompt("Ingrese el precio");
-    precio = parseInt(precio);
-    descuento = prompt("Ingrese el descuento");
-    descuento = parseInt(descuento);
+    do{
+        precio = prompt("Ingrese el precio");
+        precio = parseInt(precio);
+    }while(isNaN(precio));
+    
+    do{
+        descuento = prompt("Ingrese el descuento");
+        descuento = parseInt(descuento);
+    }while(isNaN(descuento));
 
     precioFinal = precio - (precio * (descuento/100))
 

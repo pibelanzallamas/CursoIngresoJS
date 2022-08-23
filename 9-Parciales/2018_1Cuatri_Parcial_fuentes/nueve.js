@@ -33,12 +33,12 @@ function mostrar()
         }while(!(isNaN(marca)));
 
         do{
-            peso = prompt("Ingrese el peso");
+            peso = prompt("Ingrese el peso (entre 1 y 100)");
             peso = parseInt(peso);
         }while(isNaN(peso) || peso > 100 || peso < 1);
 
         do{
-            temperatura = prompt("Ingrese la temperatura de almacenamiento");
+            temperatura = prompt("Ingrese la temperatura de almacenamiento (entre -30 y 30)");
             temperatura = parseInt(temperatura);
         }while(isNaN(temperatura) || temperatura > 30 || temperatura < -30);
         
@@ -77,5 +77,4 @@ function mostrar()
     document.write("La cantidad de productos que se conservan bajo cero son de "+ congelados + "<br>");
     document.write("El promedio del peso de todos los productos es de " + promedio + "<br>");
     document.write("El peso maximo es de " + pesoMax + " el peso minimo es de " + pesoMin);
-    
 }

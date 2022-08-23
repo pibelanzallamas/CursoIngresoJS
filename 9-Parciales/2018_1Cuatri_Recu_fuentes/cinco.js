@@ -3,7 +3,10 @@ function mostrar()
     let dia;
     let mensaje;
 
-    dia = prompt("Ingrese un dia de la semana");
+    do{
+        dia = prompt("Ingrese un dia de la semana");
+        dia = dia.toLowerCase();
+    }while(!(isNaN(dia)));
 
     switch(dia){
         case "lunes":
@@ -11,16 +14,15 @@ function mostrar()
         case "miercoles":
         case "jueves":
         case "viernes":
-            mensaje = "a trabajar";
+            mensaje = "A trabajar.";
             break;
         case "sabado":
         case "domingo":
-            mensaje = "buen finde";
+            mensaje = "Buen finde.";
             break;
         default:
-            mensaje = "no es un dia valido";
+            mensaje = "No es un dia valido.";
             break;    
     }
-    
     alert(mensaje);
 }

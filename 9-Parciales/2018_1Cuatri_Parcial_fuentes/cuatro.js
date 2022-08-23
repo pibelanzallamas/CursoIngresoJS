@@ -22,12 +22,11 @@ function mostrar()
         numero1 = parseInt(numero1);
         numero2 = parseInt(numero2);
         resultado = numero1 + numero2;
+        if(resultado > 10){
+            alert("La suma es " + resultado + " y supero el 10.");
+        }
     }
 
-    if(resultado > 10){
-        alert("el resultado es " + resultado + " y supero el 10");
-    }
-    else{
-        alert("el resultado es " + resultado);
-    }
+    alert("El resultado es " + resultado + '.');
+
 }

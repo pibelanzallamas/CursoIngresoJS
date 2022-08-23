@@ -31,11 +31,11 @@ function mostrar()
 
     do{
         do{
-            letra = prompt("Ingrese una letra");
+            letra = prompt("Ingrese una letra.");
         }while(!(isNaN(letra)));
 
         do{
-            numero = prompt("Ingrese un numero entre -100 y 100");
+            numero = prompt("Ingrese un numero entre -100 y 100.");
             numero = parseInt(numero);
         }while(isNaN(numero) || numero < -100 || numero > 100);
 
@@ -76,11 +76,10 @@ function mostrar()
 
     promedio = positivos / contador;
 
-    document.write("La cantidad de numero pares son de " + pares + "<br>");
-    document.write("La cantidad de numeros impares son de " + impares + "<br>");
-    document.write("La cantidad de ceros son de " + ceros + "<br>");
-    document.write("El promedio de los numeros positivos es de " + promedio + "<br>");
-    document.write("La suma de los negativos es de " + negativos + "<br>")
-    document.write("El numero maximo es " + numMax + " y la letra es " + letMax + ". El numero minimo es " + numMin + " y la letra es " + letMin);
-
+    document.write("La cantidad de numeros pares son de " + pares + ".<br>");
+    document.write("La cantidad de numeros impares son de " + impares + ".<br>");
+    document.write("La cantidad de ceros son de " + ceros + ".<br>");
+    document.write("El promedio de los numeros positivos es de " + promedio + ".<br>");
+    document.write("La suma de los negativos es de " + negativos + ".<br>")
+    document.write("El numero maximo es " + numMax + " y la letra es " + letMax + ". El numero minimo es " + numMin + " y la letra es " + letMin) + ".";
 }

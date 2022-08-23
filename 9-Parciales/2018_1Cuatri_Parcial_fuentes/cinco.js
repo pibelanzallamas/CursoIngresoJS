@@ -8,21 +8,21 @@ function mostrar()
     switch(planeta){
         case "mercurio":
         case "venus":
-            alert("aca hace mas calor");
+            alert("Aca hace mas calor.");
             break;
         case "tierra":
-            alert("aca vivimos");
+            alert("Aca vivimos.");
             break;
         case "marte":
         case "jupiter":
         case "saturno":
-        case "neptuno":
         case "urano":
+        case "neptuno":
         case "pluton":
-            alert("aca hace mas frio");
+            alert("Aca hace mas frio.");
             break;
         default:
-            alert("no es un planeta valido");
+            alert("No es un planeta valido.");
             break;
     }
 }

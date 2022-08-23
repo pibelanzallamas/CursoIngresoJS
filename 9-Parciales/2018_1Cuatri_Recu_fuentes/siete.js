@@ -3,17 +3,16 @@ function mostrar()
     let notas;
     let sexo;
     let i;
-    let promedio;
-    let contador;
     let sumaNotas;
+    let promedio;
     let bandera;
     let notaBaja;
     let sexoBajo;
     let varones;
 
-    promedio = 0;
-    contador = 0;
+    notas = 0;
     sumaNotas = 0;
+    promedio = 0;
     bandera = 0;
     notaBaja = 0;
     varones = 0;
@@ -23,8 +22,9 @@ function mostrar()
             notas = prompt("Ingrese la nota");
             notas = parseInt(notas);
         }while(isNaN(notas) || notas > 10 || notas < 1);
+        
         do{
-            sexo = prompt("Ingrese el sexo");
+            sexo = prompt("Ingrese el sexo (m o f).");
             sexo = sexo.toLowerCase();
         }while(!(sexo == 'm' || sexo == 'f'));
 
@@ -33,7 +33,7 @@ function mostrar()
             sexoBajo = sexo;
             bandera  = 1;
         }else{
-            if(bandera == 1 && notas < notaBaja){
+            if(notas < notaBaja){
                 notaBaja = notas;
                 sexoBajo = sexo;
             }
@@ -42,12 +42,12 @@ function mostrar()
             varones++;
         }
         sumaNotas += notas;
-        contador++;
     }
 
-    promedio = sumaNotas / contador;
+    promedio = sumaNotas / 5;
+    promedio = promedio.toFixed(2);
 
-    document.write("El promedio total de todas las notas es de " + promedio + "<br>");
-    document.write("La nota mas baja es de " + notaBaja + " y es del sexo " + sexoBajo + "<br>");
-    document.write("La cantidad de varones que aprobaron es de " + varones);
+    alert("El promedio del total de las notas es de " + promedio + ".");
+    alert("La nota mas baja es de " + notaBaja + " del sexo " + sexoBajo + ".");
+    alert("La cantidad de varones aprobados son de " + varones + ".");
 }

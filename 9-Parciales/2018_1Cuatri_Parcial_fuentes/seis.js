@@ -1,7 +1,8 @@
 function mostrar()
 {
     let hora;
-    hora = prompt("Ingrese la hora");
+
+    hora = document.getElementById("laHora").value;
     hora = parseInt(hora);
 
     switch(hora){
@@ -11,7 +12,7 @@ function mostrar()
         case 9:
         case 10:
         case 11:
-            alert("es de manana");
+            alert("Es de mañana.");
             break;
         case 12:
         case 13:
@@ -21,7 +22,7 @@ function mostrar()
         case 17:
         case 18:
         case 19:
-            alert("es de tarde");
+            alert("Es de tarde.");
             break;
         case 20:
         case 21:
@@ -33,13 +34,13 @@ function mostrar()
         case 3:
         case 4:
         case 5:                                   
-            alert("es de noche");
+            alert("Es de noche.");
             if(hora < 24){
-                alert("a dormir");
+                alert("A dormir.");
             }
             break;
         default:
-            alert("hora invalida");
+            alert("Hora invalida.");
             break;
     }
 }

@@ -12,13 +12,13 @@ function mostrar()
     descuento = 0;
     total = 0;
 
-    do{
-        dias = prompt("Ingrese la cantidad de dias");
-        dias = parseInt(dias);
-    }while(isNaN(dias));
-
     continente = document.getElementById("selecContinente").value;
     metodoPago = document.getElementById("selecPago").value;
+
+    do{
+        dias = prompt("Ingrese la cantidad de dias.");
+        dias = parseInt(dias);
+    }while(isNaN(dias));
 
     subtotal = dias * 100;
 
@@ -60,5 +60,5 @@ function mostrar()
             break;        
     }
 
-    alert("De acuerdo al continente que elijio, al metodo de pago y la cantidad de dias, su estadia le estaria saliendo: " + total + " pesos"); 
+    alert("De acuerdo al continente que elijio, al metodo de pago y la cantidad de dias, su estadia le estaria saliendo: " + total + " pesos."); 
 }
